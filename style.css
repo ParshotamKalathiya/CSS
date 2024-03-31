@@ -142,19 +142,35 @@ i {
   width: 100%;
   height: 400px;
 }
+.me-img{
+  width: 100%;
+}
+
+.bo-img{
+  width: 300px;
+}
+.a-img{
+  width: 40%;
+  height: 300px;
+}
+.me-img{
+width: 100%;
+height: 500px;
+}
 
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 480px) {
   .main{
-    width: 768px;
+    width: 480px;
   }
   .css{
     text-align: center;
     position: relative;
-    left: 200px;
+    left: 150px;
   }
   .selector{
-    width: 600px;
+    width: 470px;
     height: 1900px;
   }
   .s-img{
@@ -191,13 +207,40 @@ i {
     top: 100px;
     left: 45px;
   }
+  .m-text{
+    display: block;
+  }
+  .p-text{
+    display: block;
+  }
   .m-img{
     width: 90%;
     position: relative;
     left: 0px;
   }
   .t-img{
+    width: 80%;
+  }
+  .i-img{
     width: 90%;
+  }
+  .a-img{
+    width: 90%;
+    height: 200px;
+  }
+  .g-img{
+    width: 90%;
+    height: 200px;
+  }
+  .b-img{
+    width: 90%;
+  }
+  .bo-img{
+    width: 90%;
+  }
+  .me-img{
+    width: 90%;
+    height: 200px;
   }
   
 }
