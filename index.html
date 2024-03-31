@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <title>CSS</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <div class="main">
+    <h1 class="vcc">VCC</h1>
+    <h1 class="css">CSS</h1>
+
+
+    <div class="accordion " id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header b" id="headingOne">
+          <button class="accordion-button p" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne ">
+            <h4> CSS Introduction</h4>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body m">
+            What is CSS? <br>
+            CSS stands for <strong>Cascading Style Sheets</strong> <br>
+            CSS describes how HTML elements are to be displayed on screen, paper, or in other media <br>
+            CSS saves a lot of work. It can control the layout of multiple web pages all at once <br>
+            External stylesheets are stored in CSS files
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h4>CSS Syntax</h4>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+
+              <img
+                src="data:image/png;base64,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"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <h4>CSS Selectors</h4>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <div class="selector">
+                <img class="s-img"
+                  src="https://www.atatus.com/blog/content/images/size/w960/2023/01/css-selectors-1.png" alt="" />
+                <br> <br> <br>
+                <div class="img1">
+                  <h5>1.CSS element Selector</h5> <br>
+                  <img class="img-1"
+                    src="https://media.gcflearnfree.org/content/5ebedddc62fd4212b87ca170_05_15_2020/04.png" alt=""> <br>
+                  <br>
+                </div>
+                <div class="img2">
+                  <h5>2.The CSS id Selector </h5> <br>
+                  <img class="img-2" src="https://codewala.net/wp-content/uploads/2016/04/id-selector.png?w=869" alt="">
+                  <br> <br>
+                </div>
+                <div class="img3">
+                  <h5> 3.The CSS class Selector</h5>
+                  <img class="img-3"
+                    src="https://web.dev/static/learn/css/selectors/image/an-image-a-css-rule-the-ced38545b4bec.svg"
+                    alt=""> <br> <br>
+                </div>
+                <div class="img4">
+                  <h5> 4.The CSS Universal Selector</h5> <br>
+                  <img class="img-4"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlvOZLZPr-uK9hYj6T5VU7BbBRaM9Rs33H1AFP-EBkfg&s"
+                    alt=""> <br> <br>
+                </div>
+                <div class="img5">
+                  <h5>5.The CSS Grouping Selector</h5> <br>
+                  <img class="img-5" src="https://linuxhint.com/wp-content/uploads/2022/02/How-to-group-multiple-1.png"
+                    alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree1">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+              <h4>How To Add CSS</h4>
+            </button>
+          </h2>
+          <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              Three Ways to Insert CSS <br> <br>
+              There are three ways of inserting a style sheet: <br> <br>
+
+              <strong> External CSS <br>
+                Internal CSS <br>
+                Inline CSS </strong>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree2">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+              <h4>CSS Comments</h4>
+            </button>
+          </h2>
+          <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://www.freecodecamp.org/news/content/images/2022/06/CSSComment.png" alt=""
+                style="width: 300px; height: 150px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree3">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+              <h4>CSS Colors</h4>
+            </button>
+          </h2>
+          <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              1. RGB <br>
+              2. HEX <br>
+              3. HSL
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree4">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+              <h4>CSS Backgrounds</h4>
+            </button>
+          </h2>
+          <div id="collapseThree4" class="accordion-collapse collapse" aria-labelledby="headingThree4"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjP_Lq2VzjRiW7UNNYorJKoWGG_OW-W-mU76zZ00Yb8Q&s"
+                alt="" style="width: 300px; height: 150px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree5">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree5" aria-expanded="false" aria-controls="collapseThree5">
+              <h4>CSS Borders</h4>
+            </button>
+          </h2>
+          <div id="collapseThree5" class="accordion-collapse collapse" aria-labelledby="headingThree5"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              CSS Border Style <br><br>
+              1. dotted - Defines a dotted border <br>
+              2. dashed - Defines a dashed border <br>
+              3. solid - Defines a solid border <br>
+              4. double - Defines a double border <br>
+              5. groove - Defines a 3D grooved border. The effect depends on the border-color value <br>
+              6. ridge - Defines a 3D ridged border. The effect depends on the border-color value <br>
+              7. inset - Defines a 3D inset border. The effect depends on the border-color value <br>
+              8. outset - Defines a 3D outset border. The effect depends on the border-color value <br>
+              9. none - Defines no border <br>
+              10. hidden - Defines a hidden border
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree6">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree6" aria-expanded="false" aria-controls="collapseThree6">
+              <h4>CSS Margins</h4>
+            </button>
+          </h2>
+          <div id="collapseThree6" class="accordion-collapse collapse" aria-labelledby="headingThree6"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <div class="m-text">
+                Margin - Individual Sides <br> <br>
+                1. margin: <br>
+                2. margin-top: <br>
+                3. margin-right: <br>
+                4. margin-bottom: <br>
+                5. margin-left:
+
+                <img src="https://media.gcflearnfree.org/content/5fcf9a4c859924091c3d4746_12_08_2020/margins.png" alt=""
+                  style="width: 400px; height: 250px; border: 2px solid black;" class="m-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree7">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree7" aria-expanded="false" aria-controls="collapseThree7">
+              <h4>CSS Padding</h4>
+            </button>
+          </h2>
+          <div id="collapseThree7" class="accordion-collapse collapse" aria-labelledby="headingThree7"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <div class="p-text">
+                Padding - Individual Sides <br> <br>
+                1. padding <br>
+                2. padding-top <br>
+                3. padding-right <br>
+                4. padding-bottom <br>
+                5. padding-left <br>
+                <img src="https://cdn.educba.com/academy/wp-content/uploads/2020/02/CSS-Padding.jpg" alt=""
+                  class="p-img" style="width: 400px; height: 250px; border: 2px solid black;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree8">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree8" aria-expanded="false" aria-controls="collapseThree8">
+              <h4>CSS Text</h4>
+            </button>
+          </h2>
+          <div id="collapseThree8" class="accordion-collapse collapse" aria-labelledby="headingThree8"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img
+                src="https://image.slidesharecdn.com/csstextformatting-210128104221/75/css-text-formatting-2-2048.jpg?cb=1670580964"
+                alt="" style="width: 400px; height: 250px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree9">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree9" aria-expanded="false" aria-controls="collapseThree9">
+              <h4>CSS Fonts</h4>
+            </button>
+          </h2>
+          <div id="collapseThree9" class="accordion-collapse collapse" aria-labelledby="headingThree9"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              1. Font Family <br>
+              2. Font Style <br>
+              3. Font Size <br>
+              4. Google Fonts
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree10">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree10" aria-expanded="false" aria-controls="collapseThree10">
+              <h4>CSS Icons</h4>
+            </button>
+          </h2>
+          <div id="collapseThree10" class="accordion-collapse collapse" aria-labelledby="headingThree10"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://i.stack.imgur.com/uYI85.png" alt="">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree11">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree11" aria-expanded="false" aria-controls="collapseThree11">
+              <h4> CSS Links</h4>
+            </button>
+          </h2>
+          <div id="collapseThree11" class="accordion-collapse collapse" aria-labelledby="headingThree11"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              a : link - a normal, unvisited link <br>
+              a : visited - a link the user has visited <br>
+              a : hover - a link when the user mouses over it <br>
+              a : active - a link the moment it is clicked
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree12">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree12" aria-expanded="false" aria-controls="collapseThree12">
+              <h4>CSS Lists</h4>
+            </button>
+          </h2>
+          <div id="collapseThree12" class="accordion-collapse collapse" aria-labelledby="headingThree12"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              1. Unordered Lists: <br>
+              2. Ordered Lists: <br>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree13">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree13" aria-expanded="false" aria-controls="collapseThree13">
+              <h4>CSS Tables</h4>
+            </button>
+          </h2>
+          <div id="collapseThree13" class="accordion-collapse collapse" aria-labelledby="headingThree13"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://stuyhsdesign.files.wordpress.com/2016/02/properties.png" alt=""
+                style="width: 400px; height: 250px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree14">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree14" aria-expanded="false" aria-controls="collapseThree14">
+              <h4>CSS Display</h4>
+            </button>
+          </h2>
+          <div id="collapseThree14" class="accordion-collapse collapse" aria-labelledby="headingThree14"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://www.freecodecamp.org/news/content/images/2021/08/display-property-values.png" alt=""
+                style="width: 400px; height: 250px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree15">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree15" aria-expanded="false" aria-controls="collapseThree15">
+              <h4> CSS Layout Position</h4>
+            </button>
+          </h2>
+          <div id="collapseThree15" class="accordion-collapse collapse" aria-labelledby="headingThree15"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://miro.medium.com/v2/resize:fit:1400/1*x5xm9DVS6QouWCAeII9w8A.png" alt=""
+                style="width: 400px; height: 250px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree16">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree16" aria-expanded="false" aria-controls="collapseThree16">
+              <h4>CSS z-index</h4>
+            </button>
+          </h2>
+          <div id="collapseThree16" class="accordion-collapse collapse" aria-labelledby="headingThree16"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://bitsofco.de/img/zeDmwlyRbq-780.png" alt=""
+                style="width: 400px; height: 250px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree17">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree17" aria-expanded="false" aria-controls="collapseThree17">
+              <h4>CSS float</h4>
+            </button>
+          </h2>
+          <div id="collapseThree17" class="accordion-collapse collapse" aria-labelledby="headingThree17"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              1. left <br>
+              2. right <br>
+              3. none <br>
+              4. inherit
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree18">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree18" aria-expanded="false" aria-controls="collapseThree18">
+              <h4>CSS Opacity</h4>
+            </button>
+          </h2>
+          <div id="collapseThree18" class="accordion-collapse collapse" aria-labelledby="headingThree18"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://mgearon.com/wp-content/uploads/2016/03/Opacity.png" alt=""
+                style="width: 400px; height: 250px; border: 2px solid black;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree19">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree19" aria-expanded="false" aria-controls="collapseThree19">
+              <h4>CSS Navigation Bar</h4>
+            </button>
+          </h2>
+          <div id="collapseThree19" class="accordion-collapse collapse" aria-labelledby="headingThree19"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              1. Vertical <br>
+              2. Horizontal
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree20">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree20" aria-expanded="false" aria-controls="collapseThree20">
+              <h4>CSS Dropdowns</h4>
+            </button>
+          </h2>
+          <div id="collapseThree20" class="accordion-collapse collapse" aria-labelledby="headingThree20"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://i.stack.imgur.com/g7iRI.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree21">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree21" aria-expanded="false" aria-controls="collapseThree21">
+              <h4>CSS Forms</h4>
+            </button>
+          </h2>
+          <div id="collapseThree21" class="accordion-collapse collapse" aria-labelledby="headingThree21"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              1. label <br>
+              2. input <br>
+              3. Button
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree23">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree23" aria-expanded="false" aria-controls="collapseThree23">
+              <h4> CSS Gradients</h4>
+            </button>
+          </h2>
+          <div id="collapseThree23" class="accordion-collapse collapse" aria-labelledby="headingThree23"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img class="g-img" src="https://docs.tokens.studio/linear-gradient-x3.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree24">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree24" aria-expanded="false" aria-controls="collapseThree24">
+              <h4>CSS Shadow Effects</h4>
+            </button>
+          </h2>
+          <div id="collapseThree24" class="accordion-collapse collapse" aria-labelledby="headingThree24"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <div class="s">
+                1. text-shadow <br>
+                2. box-shadow
+                <img class="t-img" src="https://www.entheosweb.com/images/css/shadows.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree25">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree25" aria-expanded="false" aria-controls="collapseThree25">
+              <h4> CSS Transforms</h4>
+            </button>
+          </h2>
+          <div id="collapseThree25" class="accordion-collapse collapse" aria-labelledby="headingThree25"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img class="t-img" src="https://s3.amazonaws.com/usefulangle/news/1-5e569e913f900.png" alt="">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree26">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree26" aria-expanded="false" aria-controls="collapseThree26">
+              <h4>CSS Transitions</h4>
+            </button>
+          </h2>
+          <div id="collapseThree26" class="accordion-collapse collapse" aria-labelledby="headingThree26"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img class="t-img" src="https://miro.medium.com/v2/resize:fit:1400/1*kEzUBK_046VURPjlLwe1PA.png" alt="">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree27">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree27" aria-expanded="false" aria-controls="collapseThree27">
+              <h4>CSS Animations</h4>
+
+            </button>
+          </h2>
+          <div id="collapseThree27" class="accordion-collapse collapse" aria-labelledby="headingThree27"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img
+                src="https://www.freecodecamp.org/news/content/images/2023/09/css-animation-keyframes-illustration-codesweetly.png"
+                alt="" style="width: 500px; height: 300px;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree28">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree28" aria-expanded="false" aria-controls="collapseThree28">
+              <h4> CSS Buttons</h4>
+            </button>
+          </h2>
+          <div id="collapseThree28" class="accordion-collapse collapse" aria-labelledby="headingThree28"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://cdn.educba.com/academy/wp-content/uploads/2020/03/Button-in-CSS-2-1.jpg" alt=""
+                style="width: 500px; height: 300px;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree29">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree29" aria-expanded="false" aria-controls="collapseThree29">
+              <h4>CSS Media Queries</h4>
+            </button>
+          </h2>
+          <div id="collapseThree29" class="accordion-collapse collapse" aria-labelledby="headingThree29"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://www.seobility.net/en/wiki/images/6/6f/Media-Queries.png" alt=""
+                style="width: 500px; height: 300px;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree30">
+            <button class="accordion-button collapsed p" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree30" aria-expanded="false" aria-controls="collapseThree30">
+              <h4> Box Sizing</h4>
+            </button>
+          </h2>
+          <div id="collapseThree30" class="accordion-collapse collapse" aria-labelledby="headingThree30"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body m">
+              <img src="https://cdn.educba.com/academy/wp-content/uploads/2020/02/css-box-sizing.jpg" alt=""
+                style="width: 500px; height: 300px;">
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
